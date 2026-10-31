@@ -1,0 +1,20 @@
+# Documentation example only. This file is not an enabled service.
+# Adjust all paths before installing. The original deployment has been retired.
+[Unit]
+Description=GPU person-only camera recording filter (archived example)
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Documents/monitor-space-clean
+Environment=PYTHONUNBUFFERED=1
+Environment=CUDA_VISIBLE_DEVICES=0
+ExecStart=%h/Documents/monitor-space-clean/.venv/bin/python -u %h/Documents/monitor-space-clean/people_filter.py --watch --input %h/camera-recordings --output %h/camera-recordings-people --state-db %h/Documents/monitor-space-clean/people-filter.sqlite3
+Restart=on-failure
+RestartSec=30
+TimeoutStopSec=45
+Nice=10
+IOSchedulingClass=idle
+IOSchedulingPriority=7
+
+[Install]
+WantedBy=default.target

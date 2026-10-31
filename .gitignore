@@ -1,0 +1,46 @@
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+
+# Runtime journals and locks (never publish recording metadata)
+*.sqlite*
+*.db
+*.db-*
+*.lock
+*.pid
+*.log
+*.log.*
+logs/
+
+# Model weights and exported inference engines
+*.pt
+*.pth
+*.onnx
+*.engine
+*.safetensors
+
+# Camera recordings and generated clips
+*.mkv
+*.mp4
+*.avi
+*.mov
+*.webm
+*.h264
+*.h265
+*.hevc
+recordings/
+clips/
+
+# Local temporary files and backups
+backups/
+tmp/
+.DS_Store

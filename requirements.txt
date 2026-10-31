@@ -1,0 +1,5 @@
+# Direct dependency versions recorded from the archived runtime.
+# Install a PyTorch build compatible with your NVIDIA driver/CUDA setup.
+numpy==2.5.3
+torch==2.14.1
+ultralytics==8.4.171
